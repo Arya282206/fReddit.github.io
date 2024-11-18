@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="stylesheet" href="cssindex.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the public folder during the build.
+      Only files inside the public folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running npm run build.
+    -->
+    <title>Reddit</title>
+  </head>
+
+  <body>
+    <div class="header">
+      <img alt="Reddit logo" height="40" src="icon.png" width="40"/>
+      <a href="index.html"><h1>Reddit Clone</h1></a>
+      <div class="search-bar">
+       <input placeholder="Search" type="text"/>
+      </div>
+     </div>
+     <div class="content">
+      <div class="main-content" id="main-content">
+       <div class="post">
+        <div class="post-votes"></div>
+        <div class="post-title"></div>
+        <a href=""><img src="redit.png" height="500" src="reddits post.png" width="600"/></a>
+       </div>
+      </div>
+
+
+      <div class="sidebar">
+       <h2>Subreddits</h2>
+       <ul class="subreddit-list">
+        <li>
+         <img alt="Home icon" height="30" src="https://storage.googleapis.com/a1aa/image/RehoGfvZoGgeKJLrnjL6wkvOJl9MMjA9AGj5ZNrCksPvckhnA.jpg" width="30"/>
+         <button onclick="changeContent('Politics')">Politics</button>
+        </li>
+        <li>
+         <img alt="PS5 icon" height="30" src="logops5.png" width="30"/>
+         <button onclick="changeContent('PS5')">PS5</button>
+        </li>
+        <li>
+         <img alt="NoStupidQuestions icon" height="30" src="https://storage.googleapis.com/a1aa/image/Z7HfClMCs7TIYi2QG1SCffEdCeQskVXqg1G0br8dEzVN5IDPB.jpg" width="30"/>
+         <button onclick="changeContent('Movie')">Movie</button>
+        </li>
+        <li>
+         <img alt="BaldursGate3 icon" height="30" src="https://storage.googleapis.com/a1aa/image/g2dWnM0zUzLeBSG5WsUN8pCTzE8IkbpI5UvfmRcYrqdPOywTA.jpg" width="30"/>
+         <button onclick="changeContent('Meme')">Meme</button>
+        </li>
+        <li>
+         <img alt="facepalm icon" height="30" src="https://storage.googleapis.com/a1aa/image/SYqwOKRUrhJ3J137qrf3sl882di6lUCjKOfBF4zDHBOYOywTA.jpg" width="30"/>
+         <button onclick="changeContent('Football')">Football</button>
+        </li>
+        <li>
+         <img alt="interestingasfuck icon" height="30" src="https://storage.googleapis.com/a1aa/image/TadaQcJuF1LQMlXdSpO5hzixbveS2Z8rDpYRweisukekckhnA.jpg" width="30"/>
+         <button onclick="changeContent('Game')">Game</button>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <script>
+      function changeContent(subreddit) {
+      var mainContent = document.getElementById('main-content');
+      var content = '';
+      switch (subreddit) {
+          case 'Politics':
+              content = `
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Jokowi visited Solo's Notoharjo Market</div>
+                      <a href="https://www.antaranews.com/berita/4466086/jokowi-blusukan-melihat-pasar-notoharjo-solo"><img src="jokowi.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>100.9k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">DPR RI urges UN to revoke Israel's membership</div>
+                      <a href="https://www.antaranews.com/berita/4465906/dpr-ri-desak-pbb-cabut-keanggotaan-israel"><img src="dpr.png" alt="Politics subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>54.6k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">The Ministry of Home Affairs encourages cross-sector collaboration to improve villages</div>
+                      <a href="https://www.antaranews.com/berita/4465900/kemendagri-dorong-kolaborasi-lintas-sektor-untuk-majukan-desa"><img src="desa.png" alt="Politics subreddit image"></a>
+                  </div>
+
+
+                   <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Realizing the Jakarta Pilkada which is disability friendly</div>
+                      <a href="https://www.antaranews.com/berita/4465801/mewujudkan-pilkada-jakarta-yang-ramah-disabilitas"><img src="Disabilitas.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Roy Rizali Anwar was appointed Acting Governor of South Kalimantan to replace Sahbirin</div>
+                      <a href="https://www.antaranews.com/berita/4465669/roy-rizali-anwar-ditunjuk-jadi-plh-gubernur-kalsel-gantikan-sahbirin"><img src="roy.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">The Ministry of Home Affairs has handed over assistance to the regions to strengthen public transportation</div>
+                      <a href="https://www.antaranews.com/berita/4465561/kemendagri-serahkan-bantuan-ke-daerah-untuk-perkuat-trantibumlinmas"><img src="bantuan.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Prabowo and the US Minister of Defense exchanged information</div>
+                      <a href="https://www.antaranews.com/berita/4465441/prabowo-dan-menhan-as-saling-bertukar-informasi"><img src="prabowo.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                   <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Prabowo and Lloyd Austin discuss the issue of Gaza and the South China Sea</div>
+                      <a href="https://www.antaranews.com/berita/4465245/prabowo-dan-lloyd-austin-bahas-isu-gaza-dan-laut-tiongkok-selatan"><img src="lauttiongkok.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">The PANRB Ministry approved the KPPU's new organization and work procedures</div>
+                      <a href="https://www.antaranews.com/berita/4465181/kementerian-panrb-setujui-organisasi-dan-tata-kerja-baru-kppu"><img src="kppu.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Candidate Candidate 2 Edy-Hasan encourages the expansion of the Nias Islands into a new province</div>
+                      <a href="https://www.antaranews.com/berita/4465117/paslon-2-edy-hasan-dorong-pemekaran-kepulauan-nias-jadi-provinsi-baru"><img src="02.png" alt="Prabowo subreddit image"></a>
+                  </div>
+              `;
+              break;
+          case 'PS5':
+              content = `
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">List of 216 Games Launching in November, There is "Microsoft Flight Simulator 2024"</div>
+                      <a href="https://tekno.kompas.com/read/2024/11/09/10010067/daftar-216-game-yang-meluncur-november-ada-microsoft-flight-simulator-2024-"><img src="ps51.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">List of 54 Games Optimized for PS5 Pro</div>
+                      <a href="https://tekno.kompas.com/read/2024/11/06/16020007/daftar-54-game-yang-dioptimalkan-untuk-ps5-pro"><img src="ps52.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">List of Free PS Plus Games November 2024, There Are New Games That Have Not Been Released</div>
+                      <a href="https://tekno.kompas.com/read/2024/11/01/13030007/daftar-game-gratis-ps-plus-november-2024-ada-game-baru-yang-belum-rilis"><img src="ps53.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Sony Holds "Halloween Sale", Discounts on PS4 and PS5 Horror Games up to 85 Percent</div>
+                      <a href="https://tekno.kompas.com/read/2024/10/19/10010077/sony-gelar-halloween-sale-diskon-game-horor-ps4-dan-ps5-hingga-85-persen"><img src="ps54.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Game "Silent Hill 2 Remake" Launches on PS5 and PC, This is the Price in Indonesia</div>
+                      <a href="https://tekno.kompas.com/read/2024/10/08/12043877/game-silent-hill-2-remake-meluncur-di-ps5-dan-pc-ini-harganya-di-indonesia"><img src="ps55.png" alt="Prabowo subreddit image"></a>
+                  </div>
+              `;
+              break;
+          case 'Movie':
+              content = `
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">The cast of the film Love is not as beautiful as the Korean drama gives recommendations for favorite dramas, from True Beauty to A Killer Paradox</div>
+                      <a href="https://www.kompas.com/hype/read/2024/11/17/135312266/para-pemain-film-cinta-tak-seindah-drama-korea-beri-rekomendasi-drakor"><img src="film1.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Lembayung Film Drops Screens, Continues Showing Overseas</div>
+                      <a href="https://www.kompas.com/hype/read/2024/11/14/214803166/film-lembayung-turun-layar-lanjut-tayang-di-luar-negeri"><img src="film2.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Comments and Reactions on Giring Ganesha to Watch the Film Brother-in-law is Death, Aris's Scene Makes Him Cover His Ears</div>
+                      <a href="https://www.kompas.com/hype/read/2024/11/14/192459966/komentar-dan-reaksi-giring-ganesha-nonton-film-ipar-adalah-maut-adegan-aris"><img src="film3.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Steffi Zamora Becomes a Celebrity in the Film Want to Hijrah</div>
+                      <a href="https://www.kompas.com/hype/read/2024/11/14/171230566/steffi-zamora-jadi-selebgram-di-film-pengin-hijrah"><img src="film4.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Aice Ice Cream Becomes a Symbol of Warmth in the Short Film "Love, Race Cars, & Death"</div>
+                      <a href="https://biz.kompas.com/read/2024/11/14/152804828/es-krim-aice-jadi-simbol-kehangatan-dalam-film-pendek-love-race-cars-death"><img src="film5.png" alt="Prabowo subreddit image"></a>
+                  </div>
+              `;
+              break;
+          case 'Meme':
+              content = `
+                   <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title"></div>
+                      <a href=""><img src="meme.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title"></div>
+                      <a href=""><img src="meme1.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>j
+                      <div class="post-title"></div>
+                      <a href=""><img src="meme2.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title"></div>
+                      <a href=""><img src="meme3.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title"></div>
+                      <a href=""><img src="meme4.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title"></div>
+                      <a href=""><img src="meme5.png" alt="Prabowo subreddit image"></a>
+                  </div>
+              `;
+              break;
+          case 'Football':
+              content = `
+                   <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Germany vs Bosnia: Die Mannschaft Goal Party 7-0</div>
+                      <a href="https://sport.detik.com/sepakbola/bola-dunia/d-7642221/jerman-vs-bosnia-die-mannschaft-pesta-gol-7-0"><img src="bola.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">The Indonesian National Team is in a slump, Shin Tae-yong admits he is depressed</div>
+                      <a href="https://sport.detik.com/sepakbola/liga-indonesia/d-7641937/timnas-indonesia-terpuruk-shin-tae-yong-akui-tertekan"><img src="bola1.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">McTominay doesn't regret leaving MU</div>
+                      <a href="https://sport.detik.com/sepakbola/liga-italia/d-7641668/mctominay-tak-menyesal-tinggalkan-mu"><img src="bola2.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Regarding Erick Thohir who spoke about his readiness to resign as chairman of PSSI</div>
+                      <a href="https://sport.detik.com/sepakbola/liga-indonesia/d-7641915/soal-erick-thohir-yang-bicara-siap-mundur-dari-ketum-pssi"><img src="bola3.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Cristiano Ronaldo sets a record after Portugal crushes Poland</div>
+                      <a href="https://sport.detik.com/sepakbola/bola-dunia/d-7641405/cristiano-ronaldo-bikin-rekor-usai-portugal-gilas-polandia"><img src="bola4.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Ruben Amorim Prepares Big Changes at Manchester United, Are Casemiro and Eriksen Threatened?</div>
+                      <a href="https://www.bola.net/inggris/ruben-amorim-siapkan-perubahan-besar-di-manchester-united-casemiro-dan-eriksen-terancam-42c59a.html"><img src="bola5.png" alt="Prabowo subreddit image"></a>
+                  </div>
+              `;
+              break;
+          case 'Game':
+              content = `
+                   <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Ragnarok Classic Closed Beta Test Opens, Time to Get Nostalgic with the Legendary Game</div>
+                      <a href="https://inet.detik.com/games-news/d-7642229/closed-beta-test-ragnarok-classic-dibuka-saatnya-nostalgia-dengan-game-legendaris"><img src="game.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Playing games on MyTelkomsel can get attractive prizes, have you tried it yet?</div>
+                      <a href="https://inet.detik.com/telecommunication/d-7612875/main-game-di-mytelkomsel-bisa-dapat-hadiah-menarik-udah-coba-belum"><img src="game1.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Nostalgic Legendary Game Through Ragnarok Classic, Pre-Registration is Now Open</div>
+                      <a href="https://inet.detik.com/games-news/d-7595523/nostalgia-game-legendaris-lewat-ragnarok-classic-pra-registrasi-sudah-dibuka"><img src="game2.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Get Ready, Free Fire and Blue Lock Collaboration Coming Soon</div>
+                      <a href="https://www.liputan6.com/tekno/read/5786477/siap-siap-kolaborasi-free-fire-dan-blue-lock-hadir-sebentar-lagi"><img src="game3.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Be alert, know the 5 negative impacts of playing online games</div>
+                      <a href="https://www.liputan6.com/citizen6/read/5773846/waspada-ketahui-5-dampak-negatif-bermain-gim-online"><img src="game4.png" alt="Prabowo subreddit image"></a>
+                  </div>
+
+
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>77.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">Hoyoverse Announces Genshin Impact Version 5.2: Debut of Chasca and Ororon and Flying Feature in Natlan!</div>
+                      <a href="https://www.liputan6.com/tekno/read/5779390/hoyoverse-umumkan-genshin-impact-versi-52-debut-chasca-dan-ororon-hingga-fitur-terbang-di-natlan"><img src="game5.png" alt="Prabowo subreddit image"></a>
+                  </div>
+              `;
+              break;
+          default:
+              content = `
+                  <div class="post">
+                      <div class="post-votes">
+                          <i class="fas fa-arrow-up"></i>
+                          <span>23.1k</span>
+                          <i class="fas fa-arrow-down"></i>
+                      </div>
+                      <div class="post-title">President-Elect Trump, President Biden, and Dr. Jill Biden posing outside of the White House.</div>
+                      <img src="https://storage.googleapis.com/a1aa/image/cGZxNjnf4h1kKiewRklDW42ROL4pEhFwf6C8Upwbgt0jckhnA.jpg" alt="President-Elect Trump, President Biden, and Dr. Jill Biden posing outside of the White House.">
+                  </div>
+                  
+              `;
+      }
+      mainContent.innerHTML = content;
+  }
+     </script>
+     </body>
+    </html>
